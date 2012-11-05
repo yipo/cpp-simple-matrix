@@ -1,16 +1,32 @@
 #ifndef _MATRIX_H_
 #define _MATRIX_H_
 
+#include <cstring>
+
 template <typename T>
 class matrix {
 	int m,n;
 	T *buf;
 	
 public:
+	matrix() : m(0),n(0),buf(new T[0]) {}
 	matrix(int m,int n) : m(m),n(n),buf(new T[m*n]) {}
+	matrix(const matrix &mat) : m(mat.m),n(mat.n),buf(new T[m*n]) {
+		std::memcpy(buf,mat.buf,m*n*sizeof(T));
+	}
 	
 	~matrix() {
 		delete [] buf;
+	}
+	
+	matrix &operator =(const matrix &mat) {
+		if (this!=&mat) {
+			delete [] buf;
+			m=mat.m,n=mat.n;
+			buf=new T[m*n];
+			std::memcpy(buf,mat.buf,m*n*sizeof(T));
+		}
+		return *this;
 	}
 	
 	/*
