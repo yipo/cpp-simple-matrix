@@ -53,10 +53,10 @@ public:
 	* Access the element by the way of functor.
 	*/
 	T &operator ()(int i,int j) {
-		return at(i,j);
+		return buf[i*n+j];
 	}
 	const T &operator ()(int i,int j) const {
-		return at(i,j);
+		return buf[i*n+j];
 	}
 	
 	/*
