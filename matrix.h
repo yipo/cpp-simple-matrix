@@ -21,12 +21,20 @@ public:
 	
 	matrix &operator =(const matrix &mat) {
 		if (this!=&mat) {
-			delete [] buf;
+			if (mat.m*mat.n!=m*n) {
+				delete [] buf;
+				buf=new T[mat.m*mat.n];
+			}
 			m=mat.m,n=mat.n;
-			buf=new T[m*n];
 			std::memcpy(buf,mat.buf,m*n*sizeof(T));
 		}
 		return *this;
+	}
+	
+	friend void swap(matrix<T> &a,matrix<T> &b) {
+		int m=a.m;a.m=b.m,b.m=m;
+		int n=a.n;a.n=b.n,b.n=n;
+		T *t=a.buf;a.buf=b.buf,b.buf=t;
 	}
 	
 	/*
