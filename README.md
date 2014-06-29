@@ -1,11 +1,11 @@
 
 # cpp-simple-matrix
 
-This is just a fixed-size, templated, 2D array without any numeric operations and boundary checking. This is useful when passing 2D data to a function. However, if it's not what you are looking for. For a fully functional matrix on linear algebra, see [uBLAS of Boost](https://www.google.com/search?q=boost+ublas). For a higher dimension array, see [MultiArray of Boost](https://www.google.com/search?q=boost+multiarray).
+This is a fixed-size, 2D array template without numeric operations and boundary checking. Being useful to pass 2D data to a function, it is simple and handy to use rather than complicated building and configuration. However, if it's not what you are looking for. For a fully functional matrix on linear algebra, see [Eigen](http://eigen.tuxfamily.org/) or [Boost.uBLAS](https://www.google.com/search?q=boost+ublas). For a higher dimension array, see [Boost.MultiArray](https://www.google.com/search?q=boost+multiarray).
 
 ## Usage
 
-Download the [`matrix.h`](https://raw.github.com/YiPo/cpp-simple-matrix/master/matrix.h) file and include it. No library is needed to be linked.
+Download the [`matrix.h`](https://raw.github.com/YiPo/cpp-simple-matrix/master/matrix.h) file and include it. No library has to be linked.
 
 ###### Example
 
