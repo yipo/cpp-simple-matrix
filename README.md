@@ -7,6 +7,28 @@ This is just a fixed-size, templated, 2D array without any numeric operations an
 
 Download the [`matrix.h`](https://raw.github.com/YiPo/cpp-simple-matrix/master/matrix.h) file and include it. No library is needed to be linked.
 
+###### Example
+
+```c++
+#include "matrix.h"
+#include <iostream>
+using namespace std;
+
+int main() {
+	matrix<int> foo(1,3);
+	
+	foo.at(0,0)=1;
+	foo(0,1)=8;
+	foo[0][2]=3;
+	
+	cout<<"size: ";
+	cout<<foo.get_m()<<"x";
+	cout<<foo.get_n()<<endl;
+	
+	return 0;
+}
+```
+
 ## Reference
 
 The `matrix` class template is defined as follows.
