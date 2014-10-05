@@ -1,3 +1,8 @@
+// cpp-simple-matrix v1.0
+// GitHub: https://github.com/yipo/cpp-simple-matrix
+// Author: Yi-Pu Guo (YiPo)
+// License: MIT
+
 #ifndef _MATRIX_H_
 #define _MATRIX_H_
 
